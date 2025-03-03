@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- another CND -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <style>
+        .font-poppins{
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+    <title>Smart Watch</title>
+</head>
+<body class="text-gray-800">
+
+    <!-- part-1 -->
+    <section>
+        <div class="container mx-auto py-12 px-4">
+            <div class="max-w-4xl mx-auto overflow-hidden">
+                <div class="flex flex-col md:flex-row items-stretch gap-16">
+                    <div class="flex justify-center items-center">
+                        <img id="product-image" class="w-11/12  h-auto object-cover rounded-xl" src="images/purple.png" alt="smart watch" />
+                    </div>
+                    <div>
+                        <!-- heading -->
+                        <h1 class="text-2xl font-bold text-gray-800 mt-4 ">SmartX Pro Smartwatch – Stay Connected, Stay Ahead</h1>
+                        <!-- review -->
+                        <div class="flex items-center mt-2">
+                            <div>
+                                <p class="text-yellow-400">★★★★☆</p>
+                            </div>
+                            <div>
+                                <span class="ml-4 text-sm text-gray-600">(2 Reviews)</span>
+                            </div>
+                        </div>
+                        <!-- price -->
+                        <div class="flex items-center mt-4">
+                            <div>
+                                <span class="text-gray-400 line-through text-lg">$99.00</span>
+                            </div>
+                            <div class="ml-4">
+                                <span class="text-purple-600 font-bold text-2xl">$79.00</span>
+                            </div>
+                        </div>
+                        <!-- description -->
+                        <div class="mt-4">
+                            <p class="text-sm font-semibold">Experience the future on your wrist with the SmartX Pro Smartwatch. Designed for modern lifestyles, this sleek and stylish smartwatch blends innovation with elegance, keeping you connected, active, and in control—all day long.</p>
+                        </div>
+                        <!-- type amd model -->
+                        <div class="mt-4">
+                            <div class="flex items-center text-gray-700">
+                                <span class="font-semibold w-24">Type:</span>
+                                <span class="font-bold">Watch</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 mt-3">
+                                <span class="font-semibold w-24">Model:</span>
+                                <span class="font-bold">Forerunner 290XT</span>
+                            </div>
+                        </div>
+                        <!-- band color -->
+                        <div class="mt-4"> 
+                                <h1 class="text-sm font-semibold text-gray-700">Band Color</h1>
+                                <div class="mt-4 flex items-center space-x-2">
+                                    <button id="purple-color" class="w-7 h-7 rounded-full bg-purple-500 border-purple-600 ring-button"></button>
+                                    <button id="teal-color" class="w-7 h-7 rounded-full bg-teal-500 border-gray-300 ring-button"></button>
+                                    <button id="cyan-color"  class="w-7 h-7 rounded-full bg-cyan-500 border-gray-300 ring-button"></button>
+                                    <button id="gray-color" class="w-7 h-7 rounded-full bg-gray-500 border-gray-300 ring-button"></button>
+                                </div>
+                        </div>
+                        <!-- size -->
+                        <div class="mt-4">
+                                <h1 class="text-gray-700 text-sm font-semibold mb-4">Wrist Size</h1>
+                                <div class="grid grid-cols-4 gap-4 mt-4">
+                                    <button onclick="selectWristSize('S')" id="size-S" class="border border-gray-300 rounded-lg px-4 py-2 font-semibold text-sm hover:bg-gray-100">S $60</button>
+                                    <button onclick="selectWristSize('M')" id="size-M" class="border border-gray-300 rounded-lg px-4 py-2 font-semibold text-sm hover:bg-gray-100">M $79</button>
+                                    <button onclick="selectWristSize('L')" id="size-L" class="border border-gray-300 rounded-lg px-4 py-2 font-semibold text-sm hover:bg-gray-100">L $89</button>
+                                    <button onclick="selectWristSize('XL')" id="size-XL" class="border border-gray-300 rounded-lg px-4 py-2 font-semibold text-sm hover:bg-gray-100">XL $99</button>
+                                </div>
+                        </div>
+                        <!-- Quantity & Add to Cart -->
+                        <div class="mt-4 flex flex-wrap items-center space-x-4">
+                            <div class="flex items-center border border-gray-300 rounded-lg mt-5">
+                                <button class="px-4 py-2 text-gray-600 hover:text-gray-300 quantity-button">-</button>
+                                <span class="px-4">0</span>
+                                <button class="px-4 py-2 text-gray-600 hover:text-gray-300 quantity-button">+</button>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="px-6 py-3 bg-purple-600 text-white mt-4 rounded-lg shadow-lg hover:bg-purple-700">Add to Cart</button>
+                                <button class="text-purple-600 hover:text-purple-700 text-2xl"><i class="fas fa-heart ml-4 mt-6"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- part-2 -->
+     <section>
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50 hidden">
+            <div class="bg-white p-17 rounded-lg shadow-lg md:w-2/3 lg:w-1/2">
+                <h2 class="text-xl font-bold text-gray-800 mb-6">Your Cart</h2>
+                <!-- Cart Items Table -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto">
+                        <thead>
+                            <tr class="text-left border-b-2">
+                                <th class="py-2 px-4">Item</th>
+                                <th class="py-2 px-4">Color</th>
+                                <th class="py-2 px-4">Size</th>
+                                <th class="py-2 px-4">Quantity</th>
+                                <th class="py-2 px-4">Price</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <tbody>
+                        <!-- Cart items will go here dynamically -->
+                    </tbody>
+                </div>
+                <!-- Buttons -->
+                <div class="felx justify-end gap-4 mt-4">
+                    <button class="px-6 py-2 bg-gray-300 text-gray-800 font-bold rounded-lg hover:bg-gray-400 mr-4">Continue Shopping</button>
+                    <button class="px-6 py-2 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700">Checkout</button>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <script src="./script/script.js"></script>
+</body>
+</html>
