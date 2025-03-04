@@ -64,3 +64,7 @@ for (let i = 0; i < quantityElements.length; i++)
 }
 
 
+// add to cart
+document.getElementById('add-to-cart').addEventListener('click', function(event){
+    console.log('clicked');
+});

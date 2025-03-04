@@ -98,7 +98,7 @@
                                 <button class="px-4 py-2 text-gray-600 hover:text-gray-300 quantity-button">+</button>
                             </div>
                             <div class="flex items-center space-x-2">
-                                <button class="px-6 py-3 bg-purple-600 text-white mt-4 rounded-lg shadow-lg hover:bg-purple-700">Add to Cart</button>
+                                <button id="add-to-cart" class="px-6 py-3 bg-purple-600 text-white mt-4 rounded-lg shadow-lg hover:bg-purple-700">Add to Cart</button>
                                 <button class="text-purple-600 hover:text-purple-700 text-2xl"><i class="fas fa-heart ml-4 mt-6"></i></button>
                             </div>
                         </div>
@@ -125,15 +125,15 @@
                                 <th class="py-2 px-4">Price</th>
                             </tr>
                         </thead>
+                        <tbody id="cart-items">
+                            <!-- Cart items will go here dynamically -->
+                        </tbody>
                     </table>
-                    <tbody>
-                        <!-- Cart items will go here dynamically -->
-                    </tbody>
                 </div>
                 <!-- Buttons -->
                 <div class="felx justify-end gap-4 mt-4">
-                    <button class="px-6 py-2 bg-gray-300 text-gray-800 font-bold rounded-lg hover:bg-gray-400 mr-4">Continue Shopping</button>
-                    <button class="px-6 py-2 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700">Checkout</button>
+                    <button id="continue-shopping" class="px-6 py-2 bg-gray-300 text-gray-800 font-bold rounded-lg hover:bg-gray-400 mr-4">Continue Shopping</button>
+                    <button  id="checkout" class="px-6 py-2 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700">Checkout</button>
                 </div>
             </div>
         </div>
