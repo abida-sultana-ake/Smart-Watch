@@ -65,6 +65,9 @@ for (let i = 0; i < quantityElements.length; i++)
 
 
 // add to cart
-document.getElementById('add-to-cart').addEventListener('click', function(event){
-    console.log('clicked');
+document.getElementById('add-to-cart').addEventListener("click", function(event){
+    //console.log('clicked');
+    const checkoutContainer = document.getElementById('checkout-container');
+    //console.log(checkoutContainer);
+    checkoutContainer.classList.remove("hidden");
 });
