@@ -1,5 +1,4 @@
 const ringButtons = document.querySelectorAll(".ring-button"); //querySelectorAll for all elements access
-
 for(let i=0; i<ringButtons.length; i++)
 {
     const ringbtn = ringButtons[i];
@@ -45,3 +44,23 @@ function selectWristSize(size)
         }
     }
 }
+
+
+const quantityElements = document.querySelectorAll('.quantity-button');
+for (let i = 0; i < quantityElements.length; i++)
+    {
+        const quantityElement = quantityElements[i];
+        
+        quantityElement.addEventListener('click', function(event) {
+        const amount = event.target.innerText === "+" ? 1 : -1; // Check if button is "+" or "-"
+
+        // Get the actual quantity element (not just the text)
+        const quantityElement = document.getElementById("quantity");
+        const currentQuantity = parseInt(quantityElement.innerText); // Convert to integer
+        const newQuantity = Math.max(0, currentQuantity + amount); // Prevent negative values
+        //  // (o + 1) => 1 ; Math.max(0, 1) ==> max value is 1 so ans is 1
+        quantityElement.innerText = newQuantity; // Update the UI
+    });
+}
+
+
