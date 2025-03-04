@@ -65,9 +65,24 @@ for (let i = 0; i < quantityElements.length; i++)
 
 
 // add to cart
+let cartCount = 0;
 document.getElementById('add-to-cart').addEventListener("click", function(event){
     //console.log('clicked');
     const checkoutContainer = document.getElementById('checkout-container');
     //console.log(checkoutContainer);
     checkoutContainer.classList.remove("hidden");
+    const quantity = parseInt(document.getElementById("quantity").innerText);
+
+    if(quantity > 0)
+    {
+        const checkoutContainer = document.getElementById('checkout-container');
+        //console.log(checkoutContainer);
+        checkoutContainer.classList.remove("hidden");
+        cartCount = cartCount + quantity;
+        document.getElementById('cart-count').innerText = cartCount; 
+    }
+    else
+    {
+        alert("Please select a quantity");
+    }
 });
